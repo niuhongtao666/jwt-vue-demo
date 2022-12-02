@@ -1,7 +1,11 @@
 <template>
   <div class="about">
     <h2>JWT demo</h2>
-
+    <ul>
+      <li v-for="(item,index) in list" :key="index">
+        {{item}}
+      </li>
+    </ul>
     <br />
     <button @click="getAddress">获取收货地址</button>
   </div>
@@ -10,11 +14,13 @@
 
 
 <script>
+let that=this;
 export default {
   name: "home",
   data() {
     return {
-      msg: "this is about"
+      msg: "this is about",
+      list:[]
     };
   },
   methods: {
@@ -37,6 +43,7 @@ export default {
         })
         .then(function(response) {
           console.log(response);
+          that.list=response.data.result;
         })
         .catch(function(error) {
           console.log(error);
