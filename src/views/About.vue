@@ -14,7 +14,7 @@
 
 
 <script>
-let that=this;
+
 export default {
   name: "home",
   data() {
@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     getAddress() {
-
+      let that=this;
       // var sign=md5('uid=1&address_id=345+私钥');
 
       // 私钥=md5(用户密码)
