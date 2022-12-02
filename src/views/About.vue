@@ -29,7 +29,7 @@ export default {
     
       var token=localStorage.getItem('token');
       this.$http
-        .get("http://localhost:3000/api/address?uid=1&address_id=345", {
+        .get("/api/address?uid=1&address_id=345", {
           auth: {
             username: token,
             password: 'sign'
