@@ -3,7 +3,7 @@
     <h2>JWT demo</h2>
     <ul>
       <li v-for="(item,index) in list" :key="index">
-        {{item}}
+        {{item.name}}
       </li>
     </ul>
     <br />
